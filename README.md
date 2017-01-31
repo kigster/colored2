@@ -9,6 +9,8 @@
 
 ## Colored2
 
+[![Join the chat at https://gitter.im/colored2/Lobby](https://badges.gitter.im/colored2/Lobby.svg)](https://gitter.im/colored2/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This is an actively maintained fork of Chris (defunkt) Wanstrath's gem [colored](https://github.com/defunkt/colored), which appears to be no longer supported.
 
 This fork comes with a slightly spruced up syntax, some additional features, and a test suite written in [RSpec](http://rspec.info/).
