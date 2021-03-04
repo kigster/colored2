@@ -1,6 +1,7 @@
 [![Gem Version](https://badge.fury.io/rb/colored2.svg)](https://badge.fury.io/rb/colored2)
 [![Downloads](http://ruby-gem-downloads-badge.herokuapp.com/colored2?type=total)](https://rubygems.org/gems/colored2)
 [![Gitter](https://img.shields.io/gitter/room/gitterHQ/gitter.svg)](https://gitter.im/colored2)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkigster%2Fcolored2.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkigster%2Fcolored2?ref=badge_shield)
 
 [![Build Status](https://travis-ci.org/kigster/colored2.svg?branch=master)](https://travis-ci.org/kigster/colored2)
 [![Test Coverage](https://codeclimate.com/github/kigster/colored2/badges/coverage.svg)](https://codeclimate.com/github/kigster/colored2/coverage)
@@ -91,3 +92,6 @@ Bug reports and pull requests are welcome on GitHub at [https://github.com/kigst
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkigster%2Fcolored2.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkigster%2Fcolored2?ref=badge_large)
