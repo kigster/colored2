@@ -59,7 +59,7 @@ module Colored2
 
   class BackgroundColor < TextColor
     def value
-      super 10
+      super(10)
     end
   end
 end

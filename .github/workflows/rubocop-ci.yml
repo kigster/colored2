@@ -22,7 +22,7 @@ jobs:
         ruby-version: '3.2'
     - name: Bundle Install
       run: |
-        bundle check || bundle install -j 20
+        bundle check || bundle install -j 2
   
     - name: Rubocop
       run: |
