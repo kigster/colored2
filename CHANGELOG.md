@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/kigster/colored2/tree/HEAD)
+
+[Full Changelog](https://github.com/kigster/colored2/compare/v4.0.2...HEAD)
+
+**Merged pull requests:**
+
+- Updating badges for version 4.0.3 [\#13](https://github.com/kigster/colored2/pull/13) ([kigster](https://github.com/kigster))
+
 ## [v4.0.2](https://github.com/kigster/colored2/tree/v4.0.2) (2025-01-18)
 
 [Full Changelog](https://github.com/kigster/colored2/compare/v4.0.1...v4.0.2)
