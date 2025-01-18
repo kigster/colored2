@@ -8,7 +8,7 @@
 
 The most downloaded ANSI color gem you'll find :-)
 
-![Gem Total Downloads](https://img.shields.io/gem/dt/colored2?style=for-the-badge&color=A0F)
+[![Gem Total Downloads](https://img.shields.io/gem/dt/colored2?style=for-the-badge&color=A0F)](https://rubygems.org/gems/colored2)
 
 ## Backstory 
 
