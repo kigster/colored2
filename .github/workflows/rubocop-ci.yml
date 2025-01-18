@@ -2,30 +2,27 @@ name: Rubocop
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ master ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ master ]
+
 
 jobs:
   build:
-    name: Rubocop
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
+
+    strategy:
+      matrix:
+        ruby-version: [ '3.4' ]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
-      with:
-        ruby-version: '3.2'
-    - name: Bundle Install
-      run: |
-        bundle check || bundle install -j 20
-  
-    - name: Rubocop
-      run: |
-        bundle exec rubocop
-
-  
+      - uses: actions/checkout@v4
+      - name: Set up Ruby ${{ matrix.ruby-version }}
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: ${{ matrix.ruby-version }}
+      - name: Install Dependencies
+        run: bundle install -j 4
+      - name: Run Rubocop
+        run: bundle exec rubocop

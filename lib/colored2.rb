@@ -52,7 +52,7 @@ module Colored2
           surround_with_color(color:, color_self: true, string:, &block)
         end
 
-        define_method("#{color}!".to_sym) do |string = nil, &block|
+        define_method(:"#{color}!") do |string = nil, &block|
           surround_with_color(color:, color_self: false, string:, &block)
         end
       end
@@ -64,7 +64,7 @@ module Colored2
           surround_with_color(effect:, color_self: true, string:, &block)
         end
 
-        define_method("#{effect}!".to_sym) do |string = nil, &block|
+        define_method(:"#{effect}!") do |string = nil, &block|
           surround_with_color(effect:, color_self: false, string:, &block)
         end
       end
