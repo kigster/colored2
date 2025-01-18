@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    colored2 (4.0.2)
+    colored2 (4.0.3)
 
 GEM
   remote: https://rubygems.org/
@@ -73,4 +73,4 @@ DEPENDENCIES
   simplecov
 
 BUNDLED WITH
-   2.6.2
+   2.6.3
