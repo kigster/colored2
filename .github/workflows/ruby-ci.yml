@@ -22,7 +22,7 @@ jobs:
         with:
           bundler-cache: true
           ruby-version: ${{ matrix.ruby-version }}
-      - name: Install dependencies
+      - name: Install Dependencies
         run: bundle install -j 4
       - name: Run Specs
         run: bundle exec rspec --format progress -p 1
