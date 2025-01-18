@@ -2,12 +2,17 @@
 [![RSpecs](https://github.com/kigster/colored2/actions/workflows/ruby-ci.yml/badge.svg)](https://github.com/kigster/colored2/actions/workflows/ruby-ci.yml)
 [![Rubocop](https://github.com/kigster/colored2/actions/workflows/rubocop-ci.yml/badge.svg)](https://github.com/kigster/colored2/actions/workflows/rubocop-ci.yml)
 
-[![Gem Version](https://badge.fury.io/rb/colored2.svg)](https://badge.fury.io/rb/colored2)
-[![Gitter](https://img.shields.io/gitter/room/gitterHQ/gitter.svg)](https://gitter.im/colored2)
+![Gem Version](https://img.shields.io/gem/v/colored2?style=for-the-badge&color=0AF) ![MIT License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge&color=0AF) [![Gitter](https://img.shields.io/gitter/room/gitterHQ/gitter.svg?style=for-the-badge&color=F6F)](https://app.gitter.im/#/room/#colored2:gitter.im)
 
-## Colored2
+# Colored2
 
-This is an actively maintained fork of Chris (defunkt) Wanstrath's gem [colored](https://github.com/defunkt/colored), which appears to be no longer supported.
+The most downloaded ANSI color gem you'll find :-)
+
+![Gem Total Downloads](https://img.shields.io/gem/dt/colored2?style=for-the-badge&color=A0F)
+
+## Backstory 
+
+It's an actively maintained fork of Chris [@defunkt](https://github.com/defunkt) Wanstrath's gem [colored](https://github.com/defunkt/colored), which appears to be no longer supported. So instead of accepting this as a pull request, a new gem was born.
 
 This fork comes with a slightly spruced up syntax, some additional features, and a test suite written in [RSpec](http://rspec.info/).
 
@@ -86,6 +91,10 @@ Or install it yourself as:
 ## Development
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+## Support 
+
+
 
 ## Contributing
 
