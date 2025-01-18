@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/kigster/colored2/tree/HEAD)
+## [v4.0.3](https://github.com/kigster/colored2/tree/v4.0.3) (2025-01-18)
 
-[Full Changelog](https://github.com/kigster/colored2/compare/v4.0.2...HEAD)
+[Full Changelog](https://github.com/kigster/colored2/compare/v4.0.2...v4.0.3)
 
 **Merged pull requests:**
 
