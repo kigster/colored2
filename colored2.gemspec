@@ -8,13 +8,13 @@ Gem::Specification.new do |s|
   s.name              = 'colored2'
   s.version           = Colored2::VERSION
   s.license           = 'MIT'
-  s.summary           = 'Add even more color to your life.'
+  s.summary           = 'Zero dependencies ANSI coloring gem for Ruby objects.'
   s.homepage          = 'http://github.com/kigster/colored2'
   s.email             = 'kigster@gmail.com'
   s.authors           = ['Chris Wanstrath', 'Konstantin Gredeskoul']
   s.require_path      = 'lib'
-  s.files             = %w(README.md Rakefile LICENSE)
-  s.files            += Dir.glob('lib/**/*')
+  s.files             = %w(README.md Rakefile LICENSE.txt)
+  s.files            += Dir.glob('lib/**/*') + Dir.glob('docs/**/*')
 
   s.required_ruby_version = ">= 3.1"
 

@@ -56,6 +56,7 @@ module Colored2
     end
 
     extend Forwardable
+
     def_delegators :@my_class, :enable!, :disable!
 
     attr_accessor :string, :my_class
