@@ -17,6 +17,8 @@
 /.yardoc/
 /_yardoc/
 /rdoc/
+/doc
+!/doc/colored2*.png
 
 ## Environment normalisation:
 /.bundle/
@@ -36,3 +38,6 @@
 /.rubocop
 /.rubocop-https---relaxed-ruby-style-rubocop-yml
 .ruby-version
+.atom-build.json
+.rspec_status
+

@@ -1,6 +1,7 @@
 
 [![RSpecs](https://github.com/kigster/colored2/actions/workflows/ruby-ci.yml/badge.svg)](https://github.com/kigster/colored2/actions/workflows/ruby-ci.yml)
 [![Rubocop](https://github.com/kigster/colored2/actions/workflows/rubocop-ci.yml/badge.svg)](https://github.com/kigster/colored2/actions/workflows/rubocop-ci.yml)
+![coverage](docs/badges/coverage_badge.svg)
 
 ![Gem Version](https://img.shields.io/gem/v/colored2?style=for-the-badge&color=0AF) ![MIT License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge&color=0AF) [![Gitter](https://img.shields.io/gitter/room/gitterHQ/gitter.svg?style=for-the-badge&color=F6F)](https://app.gitter.im/#/room/#colored2:gitter.im)
 
@@ -27,7 +28,7 @@ In addition to the simple syntax of the original gem, which affected only the st
 
 If no block or argument is provided, the color is left open-ended, and must be explicitly reset – when using the 'bang' notation.
 
-![](doc/colored2-session1.png)
+![session1](docs/img/colored2-session1.avif)
 
 ### Complete set of colors:
 
@@ -62,7 +63,7 @@ To color numbers, require the following file, which automatically decorates `Int
 
 Below is an `IRB` — session that shows a slightly more advanced usage.
 
-![](doc/colored2-session2.png)
+![session2](docs/img/colored2-session2.avif)
 
 ##  Additional Helpers
 

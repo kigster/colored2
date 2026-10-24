@@ -1,21 +1,132 @@
 inherit_from:
-- https://relaxed.ruby.style/rubocop.yml
+  - .relaxed_rubocop.yml
 
+# Without this, the AllCops/Exclude list below REPLACES RuboCop's defaults
+# (vendor/**/*, node_modules/**/*, tmp/**/*, .git/**/*) instead of adding to
+# them. That is not academic: with `bundler-cache: true` the CI runner installs
+# gems into <repo>/vendor/bundle, RuboCop then walks into the vendored gems,
+# loads a gem's own .rubocop.yml, and dies with
+# "cannot load such file -- rubocop-rake" (exit 2) before linting anything.
 inherit_mode:
   merge:
     - Exclude
 
-require: 
-  - rubocop-rspec
-  - rubocop-rake
-
-
 AllCops:
-  TargetRubyVersion: "3.1"
-  UseCache: true
-  CacheRootDirectory: ./.rubocop/cache
+  SuggestExtensions: false
+  TargetRubyVersion: 4.0
   NewCops: enable
+  Include:
+    - "**/*.rb"
   Exclude:
-    - 'bin/*'
-    - 'vendor/*'
+    - "bin/**/*"
+    - "vendor/**/*"
 
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
+Layout/MultilineMethodArgumentLineBreaks:
+  Enabled: true
+
+Layout/FirstArgumentIndentation:
+  EnforcedStyle: consistent
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/ExtraSpacing:
+  AllowForAlignment: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+plugins:
+  - rubocop-rspec
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 50
+
+Metrics/ClassLength:
+  Max: 100
+
+# --- Alignment Rules (your main obsession) ---
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+# --- Hash formatting (this is where the magic mostly happens) ---
+
+Layout/SpaceAroundOperators:
+  Enabled: true
+
+Layout/SpaceBeforeFirstArg:
+  Enabled: true
+
+# --- RSpec configuration ---
+
+RSpec:
+  Enabled: true
+
+# RSpec/Its:
+#   Enabled: true
+
+# Allow rspec-its style:
+RSpec/DescribeClass:
+  Enabled: false
+
+# This prevents RuboCop from whining about one-liners
+RSpec/ExampleLength:
+  Max: 20
+
+# --- Relaxed rules (because life is short) ---
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+
+Style/OptionalBooleanParameter:
+  Enabled: false
+
+Naming/PredicateMethod:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+Style/SingleArgumentDig:
+  Enabled: false
+
+# CLI messages must survive RUBYOPT=W0: Kernel#warn is a documented no-op
+# under -W0, silently swallowing every error message. $stderr.puts is not.
+Style/StderrPuts:
+  Enabled: false
+
+# The uname member of CompletionMetadata is deliberately an OpenStruct.
+Style/OpenStructUse:
+  Exclude:
+    - "lib/inquirex/tty/commands/run.rb"
+
+# Examples are standalone scripts run by name, not files required through a
+# constant, so their filenames are documentation rather than a load path.
+# Hyphens are the family convention for the topical ones — inquirex-llm has
+# llm-intake.rb and tax-preparation-estimator.rb — while the numbered tour
+# (01_hello_world.rb ...) stays snake_case.
+#
+# Not cosmetic any more: `inquirex versions-bump` runs `just check-all` in
+# every package and fails the whole family bump if one package fails, so a
+# naming opinion about an example would block every release.
+Naming/FileName:
+  Exclude:
+    - "examples/**/*"

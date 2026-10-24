@@ -42,7 +42,7 @@ RSpec.describe String do
 
   describe 'new block syntax' do
     it 'defineds block syntax nested colors' do
-      expect('No Color, then'.blue!('blue inside')).to eql("No Color, then#{'blue inside'.blue}")
+      expect('No Color, then'.blue!('blue inside')).to eql("No Color, then#{"blue inside".blue}")
     end
 
     it 'defineds block syntax nested colors two levels deep and resets color' do

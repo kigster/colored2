@@ -3,6 +3,9 @@
 require File.expand_path('spec/spec_helper')
 require 'colored2/object'
 
+# rubocop: disable RSpec/LeakyLocalVariable
+# without this the color names clash with RSpec's own
+
 subject1 = red('hello')
 subject2 = red('blue').on.blue
 subject3 = on.yellow('on yellow')
@@ -10,15 +13,17 @@ subject3 = on.yellow('on yellow')
 RSpec.describe Object do
   describe 'with foreground and background colors' do
     it 'works with one color' do
-      expect(subject1).to eql('hello'.red)
+      expect(subject1).to eq('hello'.red)
     end
 
     it 'works with color on color' do
-      expect(subject2).to eql('blue'.red.on.blue)
+      expect(subject2).to eq('blue'.red.on.blue)
     end
 
     it 'adds background color using on_<color>' do
-      expect(subject3).to eql('on yellow'.on.yellow)
+      expect(subject3).to eq('on yellow'.on.yellow)
     end
   end
 end
+
+# rubocop: enable RSpec/LeakyLocalVariable
