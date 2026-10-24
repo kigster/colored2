@@ -76,7 +76,7 @@ module Colored2
         Colored2::Effect.new(options[:effect])
       ].compact.join
 
-      colored = ''
+      colored = +''
       colored << escape_sequence if options[:beginning] == :on
       colored << string
       if options[:end]
